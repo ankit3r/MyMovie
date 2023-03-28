@@ -1,6 +1,6 @@
 package com.example.mymovies.models.tvShowModel
 
-data class Result(
+data class TvShowResult(
     val backdrop_path: String,
     val first_air_date: String,
     val genre_ids: List<Int>,

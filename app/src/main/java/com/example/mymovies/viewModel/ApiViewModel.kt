@@ -13,8 +13,12 @@ import kotlinx.coroutines.launch
 import kotlin.math.log
 
 class ApiViewModel(private val apiRepo: MovieRepo) : ViewModel() {
-    private val _movieList = MutableLiveData<MovieModel>()
-    val movieList: LiveData<MovieModel> = _movieList
+    private val _populearList = MutableLiveData<MovieModel>()
+    private val _trandingList = MutableLiveData<MovieModel>()
+    private val _topRatedList = MutableLiveData<MovieModel>()
+    val PopularList: LiveData<MovieModel> = _populearList
+    val TranidList: LiveData<MovieModel> = _trandingList
+    val TopRatdList: LiveData<MovieModel> = _topRatedList
     private val _tvList = MutableLiveData<TvShowModel>()
     val tvList: LiveData<TvShowModel> = _tvList
     private val _error = MutableLiveData<String>()
@@ -31,7 +35,7 @@ class ApiViewModel(private val apiRepo: MovieRepo) : ViewModel() {
             _isLoading.value = false
             when (response) {
                 is ResponseData.Success -> {
-                    _movieList.value = response.data
+                    _populearList.value = response.data
                 }
                 is ResponseData.Error -> {
                     _error.value = response.message
@@ -47,7 +51,7 @@ class ApiViewModel(private val apiRepo: MovieRepo) : ViewModel() {
             _isLoading.value = false
             when (response) {
                 is ResponseData.Success -> {
-                    _movieList.value = response.data
+                    _trandingList.value = response.data
                 }
                 is ResponseData.Error -> {
                     _error.value = response.message
@@ -63,7 +67,7 @@ class ApiViewModel(private val apiRepo: MovieRepo) : ViewModel() {
             _isLoading.value = false
             when (response) {
                 is ResponseData.Success -> {
-                    _movieList.value = response.data
+                    _topRatedList.value = response.data
                 }
                 is ResponseData.Error -> {
                     _error.value = response.message
