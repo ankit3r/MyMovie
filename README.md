@@ -11,7 +11,7 @@ This is an Android application built using Kotlin programming language to displa
 
 
 
-## Installation
+## Installation and Cloneing
 
 ### To install the application, follow these steps:
 
