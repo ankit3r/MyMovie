@@ -12,6 +12,7 @@ This is an Android application built using Kotlin programming language to displa
 
 
 ## Installation and Cloneing
+* Download apk from drive https://drive.google.com/drive/folders/1SUf0NHwWs9PHPBVecnb9u_AE76q92qly?usp=sharing
 
 ### To install the application, follow these steps:
 
